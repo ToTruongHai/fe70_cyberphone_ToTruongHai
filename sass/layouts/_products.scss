@@ -1,0 +1,19 @@
+.products {
+  padding: 100px 0 100px 0;
+
+  .products__container {
+    h1 {
+      font-size: 3.6rem;
+      font-weight: 700;
+      color: $primary-dark;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .products__list{
+        .product__item{
+            padding: 15px;
+        }
+    }
+  }
+}

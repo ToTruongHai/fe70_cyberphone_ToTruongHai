@@ -12,6 +12,18 @@
       href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;700&family=Nunito+Sans:wght@400;600;700&family=Oswald:wght@200&family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
     <!-- index style -->
     <link rel="stylesheet" href="./css/app.css" />
@@ -19,8 +31,8 @@
   <body>
     <!-- wrapper is global scss for maxwidth -->
     <div class="wrapper">
-      <header class="header">
-        <div class="header__container container">
+      <header class="header wrapper">
+        <!-- <div class="header__container container">
           <div class="header__logo">
             <a href="/"> CyberPhone </a>
           </div>
@@ -43,7 +55,45 @@
               </li>
             </ul>
           </nav>
-        </div>
+        </div> -->
+        
+          <nav class="navbar navbar-expand-md bg-transparent navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#"> <span>CyberPhone</span></a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapsibleNavbar"
+            >
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        
       </header>
       <main>
         <section class="banner">
@@ -55,17 +105,264 @@
                 Cras tortor mi, lobortis quis ornare in, varius scelerisque
                 urna. Vivamus imperdiet dolor nec odio convallis consequat.
               </p>
-              <button class="btn btn--outlined">More Info</button>
-              <button class="btn btn--contained">Shop</button>
+              <button class="btn btn--outlined mr-2">
+                <i class="fa fa-info-circle mr-2"></i>More Info
+              </button>
+              <button class="btn btn--contained">
+                <i class="fa fa-shopping-cart mr-2"></i>Shop
+              </button>
             </div>
             <div class="banner__image">
-              <img src="./images/product-header2.png" alt="">
+              <img src="./images/product-header2.png" alt="" />
             </div>
           </div>
         </section>
-        <section class="products"></section>
+        <section class="products">
+          <div class="products__container container">
+            <h1>-Featured Products-</h1>
+            <div class="products__list row">
+              <div class="product__item col-12 col-md-6 col-lg-4">
+                <div class="products__card">
+                  <div class="products__card-image">
+                    <img src="./../images/product1.png" alt="" />
+                  </div>
+                  <div class="products__card-body">
+                    <div class="products__card-top">
+                      <div class="products__title">
+                        <h3>CyberBeats</h3>
+                        <p>Accessories</p>
+                      </div>
+                      <div class="products__price">
+                        <h3>$99.99</h3>
+                      </div>
+                    </div>
+                    <div class="products__card-bottom">
+                      <div class="products__card-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      <div class="products__card-buy">
+                        <button class="products_buy-btn btn">
+                          <i class="fa fa-shopping-cart"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product__item col-12 col-md-6 col-lg-4">
+                <div class="products__card">
+                  <div class="products__card-image">
+                    <img src="./../images/product2.png" alt="" />
+                  </div>
+                  <div class="products__card-body">
+                    <div class="products__card-top">
+                      <div class="products__title">
+                        <h3>CyberBeats</h3>
+                        <p>Accessories</p>
+                      </div>
+                      <div class="products__price">
+                        <h3>$99.99</h3>
+                      </div>
+                    </div>
+                    <div class="products__card-bottom">
+                      <div class="products__card-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      <div class="products__card-buy">
+                        <button class="products_buy-btn btn">
+                          <i class="fa fa-shopping-cart"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product__item col-12 col-md-6 col-lg-4">
+                <div class="products__card">
+                  <div class="products__card-image">
+                    <img src="./../images/product3.png" alt="" />
+                  </div>
+                  <div class="products__card-body">
+                    <div class="products__card-top">
+                      <div class="products__title">
+                        <h3>CyberBeats</h3>
+                        <p>Accessories</p>
+                      </div>
+                      <div class="products__price">
+                        <h3>$99.99</h3>
+                      </div>
+                    </div>
+                    <div class="products__card-bottom">
+                      <div class="products__card-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      <div class="products__card-buy">
+                        <button class="products_buy-btn btn">
+                          <i class="fa fa-shopping-cart"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product__item col-12 col-md-6 col-lg-4">
+                <div class="products__card">
+                  <div class="products__card-image">
+                    <img src="./../images/product4.png" alt="" />
+                  </div>
+                  <div class="products__card-body">
+                    <div class="products__card-top">
+                      <div class="products__title">
+                        <h3>CyberBeats</h3>
+                        <p>Accessories</p>
+                      </div>
+                      <div class="products__price">
+                        <h3>$99.99</h3>
+                      </div>
+                    </div>
+                    <div class="products__card-bottom">
+                      <div class="products__card-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      <div class="products__card-buy">
+                        <button class="products_buy-btn btn">
+                          <i class="fa fa-shopping-cart"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product__item col-12 col-md-6 col-lg-4">
+                <div class="products__card">
+                  <div class="products__card-image">
+                    <img src="./../images/product5.png" alt="" />
+                  </div>
+                  <div class="products__card-body">
+                    <div class="products__card-top">
+                      <div class="products__title">
+                        <h3>CyberBeats</h3>
+                        <p>Accessories</p>
+                      </div>
+                      <div class="products__price">
+                        <h3>$99.99</h3>
+                      </div>
+                    </div>
+                    <div class="products__card-bottom">
+                      <div class="products__card-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      <div class="products__card-buy">
+                        <button class="products_buy-btn btn">
+                          <i class="fa fa-shopping-cart"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product__item col-12 col-md-6 col-lg-4">
+                <div class="products__card">
+                  <div class="products__card-image">
+                    <img src="./../images/product6.png" alt="" />
+                  </div>
+                  <div class="products__card-body">
+                    <div class="products__card-top">
+                      <div class="products__title">
+                        <h3>CyberBeats</h3>
+                        <p>Accessories</p>
+                      </div>
+                      <div class="products__price">
+                        <h3>$99.99</h3>
+                      </div>
+                    </div>
+                    <div class="products__card-bottom">
+                      <div class="products__card-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      <div class="products__card-buy">
+                        <button class="products_buy-btn btn">
+                          <i class="fa fa-shopping-cart"></i>
+                          Buy Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer></footer>
+      <footer>
+        <img
+          src="./images/angle-up-light.svg"
+          class="img-fluid footer__light"
+          alt=""
+        />
+        <img
+          src="./images/angle-up-dark.png"
+          class="img-fluid footer__dark"
+          alt=""
+        />
+
+        <div class="footer_container container">
+          <div class="footer_container-row">
+            <p>© 2021</p>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Shop</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
+  <!-- Bootstrap -->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
 </html>

@@ -1,0 +1,43 @@
+footer{
+    background-color: $primary-main;
+    padding: 0 0 60px 0;
+    img{
+        margin-bottom: 60px;
+    }
+    .footer__light{
+        display: block;
+    }
+    .footer__dark{
+        display: none;
+    }
+
+    .footer_container{
+        .footer_container-row{
+            display: flex;
+            justify-content: space-between;
+            p{
+                color: white;
+                font-weight: 400;
+                font-size: 1.5rem;
+            }
+            ul{
+                display: flex;
+                gap:3rem;
+
+                li{
+                    a{
+                        color: white;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                    }
+
+                    &:hover {
+                        a{
+                            opacity: 0.75;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -3,19 +3,29 @@
   border-radius: 8px;
   font-size: 1.4rem;
   font-weight: 600;
-  box-shadow: 0 3px 6px #c9d8f4;
+  box-shadow: $box-shadow;
   transition: 0.5s;
 
   cursor: pointer;
 }
 
-.btn--outlined{
-    background: transparent;
-    color: $primary-main;
-    border: 2px solid $primary-main;
-}
-.btn--contained{
+.btn--outlined {
+  background: transparent;
+  color: $primary-main;
+  border: 2px solid $primary-main;
+
+  &:hover {
     background: $primary-main;
     color: white;
-    border: 2px solid $primary-main;
+  }
+}
+.btn--contained {
+  background: linear-gradient(120deg, #60a4f4, #2a73dd);
+  color: white;
+  border: none;
+  padding: 15.5px 46px;
+  &:hover{
+    color: white;
+    opacity: 0.75;
+  }
 }
