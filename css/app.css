@@ -136,9 +136,13 @@ table {
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+}
 
 body {
   font-family: "Nunito Sans", sans-serif;
+  background-color: #f5f9fe;
 }
 
 html {
@@ -146,8 +150,13 @@ html {
 }
 
 .wrapper {
-  max-width: 1440px;
+  max-width: 1980px;
   margin: 0 auto;
+}
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    width: 100%;
+  }
 }
 
 .container {
@@ -170,44 +179,116 @@ html {
   color: #2a73dd;
   border: 2px solid #2a73dd;
 }
-
-.btn--contained {
+.btn--outlined:hover {
   background: #2a73dd;
   color: white;
-  border: 2px solid #2a73dd;
+}
+
+.btn--contained {
+  background: linear-gradient(120deg, #60a4f4, #2a73dd);
+  color: white;
+  border: none;
+  padding: 15.5px 46px;
+}
+.btn--contained:hover {
+  color: white;
+  opacity: 0.75;
+}
+
+.products__card {
+  box-shadow: 0 3px 6px #c9d8f4;
+  padding: 30px;
+  border-radius: 5px;
+}
+.products__card .products__card-image img {
+  width: 100%;
+  box-shadow: 0 3px 6px #c9d8f4;
+  border-radius: 5px;
+}
+.products__card .products__card-body {
+  padding: 2rem;
+}
+.products__card .products__card-body .products__card-top {
+  display: flex;
+  justify-content: space-between;
+}
+.products__card .products__card-body .products__card-top h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1d365e;
+  margin: 0 0 15px 0;
+}
+.products__card .products__card-body .products__card-top p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #1d365e;
+  margin: 0 0 15px 0;
+}
+.products__card .products__card-body .products__card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.products__card .products__card-body .products__card-bottom .products__card-rating i {
+  color: #f9d412;
+  font-size: 1.6rem;
+}
+.products__card .products__card-body .products__card-bottom .products__card-buy .products_buy-btn {
+  background: #f5f9fe;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 0.03rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2a73dd;
+  box-shadow: 2px 2px 4px #e2ebfc, -2px -2px 4px #fff;
+  transition: 0.5s;
+}
+.products__card .products__card-body .products__card-bottom .products__card-buy .products_buy-btn i {
+  font-size: 1.3rem;
+}
+.products__card .products__card-body .products__card-bottom .products__card-buy .products_buy-btn:hover {
+  box-shadow: inset 1px 1px 3px #e2ebfc, inset -2px -2px 5px #fff;
 }
 
 .header {
-  background-color: #f5f9fe;
   box-shadow: 0 2px 4px #e2ebfc;
   position: fixed;
   width: 100%;
-  max-width: 1440px;
+  background-color: #f5f9fe;
+  z-index: 1000;
 }
-.header .header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
+.header .navbar {
+  padding: 0 170px !important;
 }
-.header .header__container .header__logo a {
+.header .navbar a span {
   font-size: 2.5rem;
   font-weight: 700;
   color: #2a73dd;
 }
-.header .header__container .header__nav .header__nav-list {
-  display: flex;
+@media only screen and (max-width: 768px) {
+  .header .navbar {
+    padding: 20px 100px !important;
+  }
 }
-.header .header__container .header__nav .header__nav-list .header__nav-item {
+.header .navbar .navbar-toggler:focus {
+  outline: none;
+}
+.header .navbar .navbar-toggler i {
+  color: #1d365e;
+  font-size: 2.5rem;
+}
+.header .navbar #collapsibleNavbar .navbar-nav .nav-item {
   padding: 25px;
   cursor: pointer;
 }
-.header .header__container .header__nav .header__nav-list .header__nav-item a {
+.header .navbar #collapsibleNavbar .navbar-nav .nav-item a {
   font-size: 1.5rem;
   font-weight: 600;
   color: #1d365e;
+  text-align: center;
 }
-.header .header__container .header__nav .header__nav-list .header__nav-item a::after {
+.header .navbar #collapsibleNavbar .navbar-nav .nav-item a::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -217,16 +298,16 @@ html {
   transition: 0.2s;
   margin: 3px 0 0 0;
 }
-.header .header__container .header__nav .header__nav-list .header__nav-item:hover a {
+.header .navbar #collapsibleNavbar .navbar-nav .nav-item:hover a {
   color: #2a73dd;
 }
-.header .header__container .header__nav .header__nav-list .header__nav-item:hover a::after {
+.header .navbar #collapsibleNavbar .navbar-nav .nav-item:hover a::after {
   transform: scaleX(1);
 }
-.header .header__container .header__nav .header__nav-list .header__nav-item--active a {
+.header .navbar #collapsibleNavbar .navbar-nav .active a {
   color: #2a73dd;
 }
-.header .header__container .header__nav .header__nav-list .header__nav-item--active a::after {
+.header .navbar #collapsibleNavbar .navbar-nav .active a::after {
   transform: scaleX(1);
 }
 
@@ -234,7 +315,7 @@ html {
   background-image: url("./../images/product-header-bg.jpg");
   background-size: cover;
   background-position: center bottom;
-  padding: 250px 0 0 0;
+  padding: 200px 0 190px 0;
 }
 .banner .banner__container {
   display: flex;
@@ -260,13 +341,62 @@ html {
   margin-bottom: 25px;
 }
 .banner .banner__container .banner__image img {
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 @media only screen and (max-width: 768px) {
   .banner .banner__container .banner__image img {
     display: none;
   }
+}
+
+.products {
+  padding: 100px 0 100px 0;
+}
+.products .products__container h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #1d365e;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.products .products__container .products__list .product__item {
+  padding: 15px;
+}
+
+footer {
+  background-color: #2a73dd;
+  padding: 0 0 60px 0;
+}
+footer img {
+  margin-bottom: 60px;
+}
+footer .footer__light {
+  display: block;
+}
+footer .footer__dark {
+  display: none;
+}
+footer .footer_container .footer_container-row {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer_container .footer_container-row p {
+  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+footer .footer_container .footer_container-row ul {
+  display: flex;
+  gap: 3rem;
+}
+footer .footer_container .footer_container-row ul li a {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+footer .footer_container .footer_container-row ul li:hover a {
+  opacity: 0.75;
 }
 
 /*# sourceMappingURL=app.css.map */

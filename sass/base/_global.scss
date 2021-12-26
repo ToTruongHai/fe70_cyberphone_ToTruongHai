@@ -1,5 +1,6 @@
 body{
     font-family: 'Nunito Sans', sans-serif;
+    background-color: #f5f9fe;
 }
 
 html{
@@ -7,8 +8,11 @@ html{
 }
 
 .wrapper{
-    max-width: 1440px;
+    max-width: 1980px;
     margin: 0 auto;
+    @include Responsive(XL){
+        width: 100%;
+    }
 }
 
 .container{
